@@ -58,6 +58,8 @@ class EstructurasControl{
         double facto; //case 8
         int lado ; //caso 9
         int filas; //caso 10
+        int alt; //caso 12
+        double nume1, num2, resu; //case 13
         
 
         do{
@@ -348,9 +350,77 @@ class EstructurasControl{
                     break;
                 case 12:
                     //Diamante
+                     System.out.println("Ingrsese la altura del diamante que desea: ");
+                     alt = entrada.nextInt();
 
+                     for (int i = 1; i <= alt; i++) {
+                        for (x = 1; x <= alt - i; x++){
+                            System.out.print(" ");
+                        }
+                        for (int j = 1; j <= 2 * i - 1; j++){
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                     }
+                     for (int i = alt - 1; i >= 1; i--) {
+                        for (x = 1; x <= alt - i; x++){
+                            System.out.print(" ");
+                        }
+                        for (int j = 1; j <= 2 * i - 1; j++){
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                     }
                     break;
                 case 13:
+                    //calculadora
+                    System.out.println("Elija la operación que desea realizar: ");
+                    System.out.println("1.- Suma");
+                    System.out.println("2.- Resta");
+                    System.out.println("3.- Multiplicacion");
+                    System.out.println("4.- División");
+                    System.out.println("Si no esta la operacion que desea puede salir");
+                    System.out.println("5.- Salir");
+                    opcion = entrada.nextInt();
+
+                    switch (opcion) {
+                        case 1:
+                            System.out.println("Ingrese el primer numero: ");
+                            nume1 = entrada.nextDouble();
+                            System.out.println("Ingrese el segundo numero: ");
+                            num2 = entrada.nextDouble();
+
+                            resu = nume1 + num2;
+                            System.out.println("El resultado es: " + resu);
+                            break;
+                        case 2:
+                            System.out.println("Ingrese el primer numero: ");
+                            nume1 = entrada.nextDouble();
+                            System.out.println("Ingrese el segundo numero: ");
+                            num2 = entrada.nextDouble();
+
+                            resu = nume1 - num2;
+                            System.out.println("El resultado es: " + resu);
+                            break;
+                        case 3:
+                            System.out.println("Ingrese el primer numero: ");
+                            nume1 = entrada.nextDouble();
+                            System.out.println("Ingrese el segundo numero: ");
+                            num2 = entrada.nextDouble();
+
+                            resu = nume1 * num2;
+                            System.out.println("El resultado es: " + resu);
+                            break;
+                        case 4:
+                            System.out.println("Ingrese el primer numero: ");
+                            nume1 = entrada.nextDouble();
+                            System.out.println("Ingrese el segundo numero: ");
+                            num2 = entrada.nextDouble();
+
+                            resu = nume1 / num2;
+                            System.out.println("El resultado es: " + resu);
+                            break;
+                    }
                     break;
                 case 14:
                     break;

@@ -53,6 +53,11 @@ class EstructurasControl{
         int num, positivos = 0;//caso 4
         int negativos = 0; //caso 4
         double base, altura, radio, volumen, perimetro, area; //caso 6
+        int t; //case7
+        int x, numero; //caso 8
+        double facto; //case 8
+        int lado ; //caso 9
+        int filas; //caso 10
         
 
         do{
@@ -261,16 +266,89 @@ class EstructurasControl{
                 }
                     break;
                 case 7:
+                    //tabla 
+                   System.out.println("N   |    |     |         |");
+                   System.out.println("--------------------------");
+
+                  for (int i = 1; i <= 10; i++) {
+                    System.out.print(i + "   | ");
+                    System.out.print(10 * i + " | ");
+                    System.out.print(100 * i + " | ");
+                    System.out.println(1000 * i + "| ");
+                    System.out.println("--------------------------");
+                  }
+
                     break;
                 case 8:
+                    //factorial
+                    System.out.println("Ingrese un numero entero positivo que desee calcular: ");
+                    numero = entrada.nextInt(); 
+                    
+                    //si ingresa un numero negativo
+                    if(numero < 0){
+                        System.out.println("El numero debe ser positivo");
+                    }else{
+                        facto = 1;
+                        for(x = numero; x >= 1; x--){
+                            facto = facto * x;
+                        }
+                        System.out.println("El factorial del numero:  " + numero + " es " + facto);
+                    }
                     break;
                 case 9:
+                    //Dibujito
+                    System.out.print("Ingrese el tamaño del lado del cuadrado que desee, entre 1 y 20 por fas: ");
+                    lado = entrada.nextInt();
+
+                    if (lado >= 1 && lado <= 20) {
+                        for (int i = 1; i <= lado; i++) {
+                            for (x = 1; x <= lado; x++) {
+                                System.out.print("* ");
+                            }
+                            System.out.println();
+                        }
+                    } else 
+                        System.out.println("El tamaño del lado solo puede ser entre el 1 al 20");
                     break;
                 case 10:
+                    //figura hueca
+                    System.out.print("Ingrese el tamaño del lado del cuadrado que desee, entre 1 y 20 por fas: ");
+                    lado = entrada.nextInt();
+
+                    if (lado >= 1 && lado <= 20) {
+                        for (int i = 1; i <= lado; i++) {
+                            for (x = 1; x <= lado; x++) {
+                                if (i == 1 || i == lado || x == 1 || x == lado){
+                                    System.out.print("* ");
+                                } else {
+                                    System.out.print("  ");
+                                }
+                            }
+                            System.out.println();
+                        }
+                    } else {
+                       System.out.println("El tamaño del lado solo puede ser entre el 1 al 20");
+                    } 
                     break;
                 case 11:
+                    //patrones de codigo
+                    System.out.println("Ingrese el numero de filas que desea oor favor: ");
+                    filas = entrada.nextInt();
+
+                    for (int i = 1; i <= filas; i++) {
+                        for (x = 1; x <= filas; x++) {
+                            if ((i + x) % 2 == 0) {
+                                System.out.print("* ");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 12:
+                    //Diamante
+
                     break;
                 case 13:
                     break;

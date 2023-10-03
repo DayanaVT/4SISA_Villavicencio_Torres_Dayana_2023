@@ -4,7 +4,7 @@ import java.lang.Math;
 public class Figura {
 
     //variables
-    double lado, altura, area, perimetro, base;
+    double lado, altura, area, perimetro, base, lado1, lado2;
     int opcion;
     char letra;
 
@@ -80,7 +80,24 @@ public class Figura {
     }
 
     public void calcularTriangulo(){
-        
+        try {
+            System.out.println("Ingresa el valor de un lado del triangulo");
+            lado = entrada.nextDouble();
+
+            System.out.println("Ingrsese el valor del segundo lado del triangulo");
+            lado1 = entrada.nextDouble();
+
+            System.out.println("Ingrese el valor del tercer lado del triangulo");
+            lado2 = entrada.nextDouble();
+
+            perimetro = lado + lado1 +lado2;
+            area = 0.5 * lado * lado;
+            
+            System.out.println("El perimetro es de: " + perimetro + " El area es de: " + area);
+        }catch(Exception e){
+            System.out.println("Ingrese solo numeros");
+            System.out.println("Error: " + e.getMessage());
+        }
     }
     
 }

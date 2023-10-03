@@ -4,8 +4,6 @@
 import java.util.Scanner;
 
 class Ejercicios{
-
-    public static void main(charAt[] args){
     //objeto para la entrada de datos
     Scanner entrada = new Scanner(System.in);
 
@@ -39,6 +37,7 @@ class Ejercicios{
                 break;
             default:
                 System.out.println("Gracias por jugar :3");
+                break;
         }
     }
 
@@ -47,7 +46,7 @@ class Ejercicios{
         //o funciones que necesiten una entrada o salida de algun tipo de dato
 
         //calculadora
-        double num1 = 0.00, suma = 0.00, multi = 1.00;
+        double num1 = 0.00, suma = 0.00, multi = 1.00, num2 = 0.00, division;
         char operacion;
 
         System.out.println("Selecciona la operacion que deseas realizar:");
@@ -87,9 +86,20 @@ class Ejercicios{
                 System.out.println("El resultado de la operacion es: " + multi);
                 break;
             case 'c':
-                System.out.println("Para detener la división, ingrese el 0");
-            //ahi hagan la division de tarea :3
-            
+                //tarea division
+                System.out.println("Ingrese el numero que desea dividir: ");
+                num1 = entrada.nextDouble();
+                System.out.println("Ingrese el numero entre el que desea dividirlo: ");
+                num2 = entrada.nextDouble();
+
+                if (num2 == 0){
+                    System.out.println("No se puede dividir entre cero :c");
+                }
+                else {
+                    division = num1 / num2;
+                    System.out.println("El resultado de la operacion es:" + division);
+                }
+
                 break;
             default:
                 System.out.println("opcion no valida, ayos UwU/");
@@ -203,5 +213,5 @@ class Ejercicios{
     public void Ejercicio4(){
         
     }
-    }
+    
 }

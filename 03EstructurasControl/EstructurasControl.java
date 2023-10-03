@@ -269,6 +269,7 @@ class EstructurasControl{
                     break;
                 case 7:
                     //tabla 
+                    //un ciclo for 
                    System.out.println("N   |    |     |         |");
                    System.out.println("--------------------------");
 

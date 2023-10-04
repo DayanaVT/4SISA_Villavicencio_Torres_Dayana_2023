@@ -6,7 +6,7 @@ public class arregloMatriz {
         /*
         vamos a realizar un arreglo unidimensional y correrlo para ver que hay 
         en cada elemento 
-        */
+        
 
        //comi se define un arreglo
        int arreglo[] = new int[10];
@@ -27,5 +27,36 @@ public class arregloMatriz {
        for (int j = 0; j < arreglo.length; j++){
         System.out.println("Ingresa el valor de la posicion del arreglo: " + arreglo[j] + " valor ");
        }
+       */
+      Scanner entrada = new Scanner(System.in);
+      int matriz[][] = new int[3][3];
+
+      //primero tenemos que ingresar los valores de la matriz
+      for(int i = 0; i < matriz.length; i++){
+        //filas
+        System.out.println(i);
+        for(int j = 0; j < matriz.length; j++){
+            //columnas
+            System.out.println(j);
+            System.out.println("Ingresa el valor de la fila: " + i
+            + "ingresa el valor de la columna: " + j);
+            matriz[i][j] = entrada.nextInt();
+        }
+      }
+
+      //vamos a sumar y promediar
+      float sumarFilas = 0;
+
+      for(int i = 0; i < matriz.length; i++){
+        for(int j = 0; j < matriz.length; j++){
+            //sumo las filas
+            sumarFilas += matriz[i][j];
+            //imprimo el resultado con formato
+            System.out.println(String.format("%d", matriz[i][j]));
+        }
+        //existen diferentes tipos de formatos 
+        //%d es int %s es string %c es char %f es float
+        System.out.println(String.format("La suma de las filas %f, El promedio de la fila %.2f", sumarFilas, sumarFilas/matriz.length ));
+      }
     }   
 }

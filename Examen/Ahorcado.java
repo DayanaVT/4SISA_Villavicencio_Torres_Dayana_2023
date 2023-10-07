@@ -6,6 +6,8 @@ class Ahorcado{
 
     public static void main(String[] args){
 
+        System.out.println("Holis, soy Villavicencio Torres Dayana y elabore este juego");
+
         Scanner entrada = new Scanner(System.in);
 
         String palabra;
@@ -45,7 +47,6 @@ class Ahorcado{
                 System.out.println("Tu puntaje es de: " + puntaje);
             } else{
                 System.out.println("Letra incorrecta :(, vuelve a intentarlo");
-                intentos--;
                 System.out.println("Tienes "  + intentos-- + "intentos");
             }
             if (palabra(letraAdivinada)){

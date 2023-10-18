@@ -1,4 +1,4 @@
-package 08Hereencia;
+
 //vamos a crear una tienda de mascotas de adopcion
 
 public class Animal {
@@ -7,7 +7,7 @@ public class Animal {
      * Principio de encapsulamiento 
      * es podeer restringir el acceso a los datos, vamos a poder agrupar en una clase 
      * el acceso a los diferentes atributos y metodos u objetos de clase, para que n
-     * puedan ser modificados desde otro lugra
+     * puedan ser modificados desde otro lugar
     */
 
     //defdinir las variables
@@ -74,42 +74,5 @@ public class Animal {
 
     public void setEdad(int edad){
         this.edad = edad;
-    }
-
-    //para poder aplicar la herencia a una clase, s utiliza la palabra reserada
-    //extends
-
-    public class Michi extends Animal {
-
-        //como puede heredar todas las caracteristicas de la clase padre
-
-        private int num_vidas;
-
-        public Michi(){
-
-        }
-
-        //aplico lla sobrecarga
-        public Michi(String nombre, String raza, String tipo_alimento, int edad, int num_vidas){
-            //y para poder acceder a la clase padre se utiliza la plabra resrrvada super
-            super(nombre, raza, tipo_alimento, edad);
-            this.num_vidas = num_vidas;
-        }
-
-        //get y set
-        public void setNum_vidas(int num_vidas){
-            this.num_vidas = num_vidas;
-        }
-
-        public int getNum_vidas(){
-            return num_vidas;
-        }
-
-        public void mostrarMichi(){
-            System.out.println("El nombre del michi es: " + getNombre() + "\n"
-                               + "La raza del michi es: " + getRaza() + "\n"
-                               + "Se alimenta de: " + getTipo_Alimento() +"\n"
-                               +);
-        }
     }
 }

@@ -1,5 +1,4 @@
 
-
 public class Principal {
 
     public static void main(String[] args){
@@ -15,6 +14,10 @@ public class Principal {
          * hamster
          * conejos
          * hurones
+         * otro
+         * 
+         * el programa debe tener un menu donde se muestren los datos de la mascota 
+         * a elegir
          */
     }
     

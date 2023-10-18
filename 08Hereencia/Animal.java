@@ -106,7 +106,10 @@ public class Animal {
         }
 
         public void mostrarMichi(){
-            System.out.println("El nombre del michi es: " + getNombre() + "\n");
+            System.out.println("El nombre del michi es: " + getNombre() + "\n"
+                               + "La raza del michi es: " + getRaza() + "\n"
+                               + "Se alimenta de: " + getTipo_Alimento() +"\n"
+                               +);
         }
     }
 }

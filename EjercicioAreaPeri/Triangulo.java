@@ -1,6 +1,7 @@
 
 public class Triangulo extends Figeometrica {
     private double base, altura, altura1;
+    double calcuArea, calcuPeri;
 
     public Triangulo(){
 
@@ -36,24 +37,22 @@ public class Triangulo extends Figeometrica {
     public void setAltura1(double altura1){
         this.altura = altura1;
     }
-    public void mostrarArea(){
+    public void mostrarTriangulo(){
         try{
             if(getAltura() < 0){
                 throw new IllegalArgumentException("No puede ser negativo la altura del triangulo");
             }
-            double calcuArea = 0.5 *base * altura * altura1 ;
+            calcuArea = 0.5 * getBase() * getAltura() * getAltura1() ;
     
             System.out.println("El area del triangulo es: " + calcuArea);
         } catch(IllegalArgumentException e){
             System.out.println("Mal jijij):" + e.getMessage());
         }
-    }
-    public void mostrarPerimetro(){
         try{
             if(getAltura() < 0){
                 throw new IllegalArgumentException("No puede ser negativo la altura del triangulo");
             }
-            double calcuPeri = base + altura + altura1;
+            double calcuPeri = getBase() + getAltura() + getAltura1();
             System.out.println("El perimetro del triangulo es: " + calcuPeri);
         } catch(IllegalArgumentException e){
             System.out.println("Mal jijij):" + e.getMessage());

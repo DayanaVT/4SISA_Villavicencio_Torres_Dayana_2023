@@ -18,7 +18,7 @@ public class Principal {
             op = entrada.nextInt();
 
             switch(op) {
-                //trainagulo
+                //rectangulo
                 case 1:
                    System.out.println("Ingrese la longitud del rectangulo por fis: ");
                    double longitud = entrada.nextDouble();
@@ -32,6 +32,7 @@ public class Principal {
                 break;
 
                 case 2:
+                //circulo
                   System.out.println("Ingrese el radio del círculo: ");
                   double radio = entrada.nextDouble();
                   
@@ -42,14 +43,37 @@ public class Principal {
                 break;
 
                 case 3:
+                //triangulo
                   System.out.println("Ingrese la base del triángulo: ");
                   double base = entrada.nextDouble();
                   System.out.println("Ingrese la altura del triángulo: ");
                   double altura = entrada.nextDouble();
-
+                  System.out.println("Ingrese la altura 2 del triángulo: ");
+                  double altura1 = entrada.nextDouble();
+                  
+                  public void mostrarTriangulo(){
+                    try{
+                        if(getAltura() < 0){
+                            throw new IllegalArgumentException("No puede ser negativo la altura del triangulo");
+                        }
+                        calcuArea = 0.5 * getBase() * getAltura() * getAltura1() ;
+                
+                        System.out.println("El area del triangulo es: " + calcuArea);
+                    } catch(IllegalArgumentException e){
+                        System.out.println("Mal jijij):" + e.getMessage());
+                    }
+                    try{
+                        if(getAltura() < 0){
+                            throw new IllegalArgumentException("No puede ser negativo la altura del triangulo");
+                        }
+                        double calcuPeri = getBase() + getAltura() + getAltura1();
+                        System.out.println("El perimetro del triangulo es: " + calcuPeri);
+                    } catch(IllegalArgumentException e){
+                        System.out.println("Mal jijij):" + e.getMessage());
+                    }
+                }
                   Triangulo triangu = new Triangulo();
-                  triangu.mostrarArea();
-                  triangu.mostrarPerimetro();
+                  triangu.mostrarTriangulo();
                    
 
                 break;

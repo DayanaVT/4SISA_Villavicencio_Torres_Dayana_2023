@@ -124,20 +124,22 @@ public class ComponenteArchivo extends JFrame implements ActionListener{
                 System.out.println("Error feo " + ioe.getMessage());
             }
 
-                if(abre!=null){
+                if(abre!= null){
                     System.out.println("aqui");
                     //vamos a ocupar un buffer para recorrer los elementos del archivo
                     FileReader archivos = new FileReader(abre);
                     BufferedReader lee = new BufferedReader(archivos);
+                    //tarea
+                    String linea;
                     
                     //como no sabemos cuanta informacion tiene ocupamos un while
-                    while((aux = lee.readLine()) != null){
-                        System.out.println("hola");
+                    while((linea = lee.readLine()) != null){
+                        //tarea
                         //almaceno el texto del archivo
-                        texto += aux + "/n";
+                        texto += linea + "/n";
                     }
                     lee.close();
-                    System.out.println("hola2");
+                    areatexto.setText(texto);
                 }
          
         }catch(Exception e){
